@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import random
 
 vetor = []
@@ -5,7 +6,7 @@ vetor = []
 numero = int(input('qual numero deseja encontrar no vetor? '))
 
 # numero de elementos na lista (com -1)
-test = 11
+test = 21
 
 for i in range(test):
     vetor.append(random.randrange(test))

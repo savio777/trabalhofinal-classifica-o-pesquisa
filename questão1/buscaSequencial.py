@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 # biblioteca para gerar numeros aleatorios
 import random
 
@@ -8,12 +10,12 @@ vetor = []
 numero = int(input('qual numero deseja procurar no vetor? '))
 
 # encher o vetor com 20 numeros aleatorios 
-for i in range(20):
+for i in range(21):
     vetor.append(random.randrange(21)) 
 
 # função sequencial para encontrar o numero desejado no vetor
 def procurarNumero(num, vet):
-    for i in range(20):
+    for i in range(len(vet)):
         #print(vet[i])
         if(vet[i]==num):
             return 'numero encontrado ', vet[i]
