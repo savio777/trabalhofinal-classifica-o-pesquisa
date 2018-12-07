@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import math
+import random
 
 vetor = []
 
@@ -12,20 +13,26 @@ def procurarNum(num, vet):
     tamanho = len(vet)
     pulo = math.sqrt(tamanho)
 
-    antes = 0
-    while(vet[min(tamanho,pulo)-1] < num):
-        antes = pulo
+    comeco = 0
+    while(vet[int(min(pulo, tamanho)-1)] < num):
+        comeco = pulo
         pulo += math.sqrt(tamanho)
-        if(antes >= tamanho):
-            return num," não está no vetor"
-
-    # percorrer normalmente até o numero desejado
-    while(vet[antes] < num):
-        antes += 1  
-        if(antes == min(pulo, tamanho)):
-            return num," não está no vetor"
+        if(comeco >= tamanho):
+            return -1
         
-    if(vet[antes] == num):
-        return vet[antes]," está no vetor"
+    while(vet[int(comeco)] < num):
+        comeco += 1
+        if(comeco == min(pulo, tamanho)):
+            return -1
     
-print(procurarNum(numero, vetor))
+    if(vet[int(comeco)] == num):
+        return comeco
+    
+    return -1
+
+print(vetor)
+
+if(procurarNum(numero, vetor) > -1):
+    print(numero,' está no vetor')
+else:
+    print(numero,' não está no vetor')

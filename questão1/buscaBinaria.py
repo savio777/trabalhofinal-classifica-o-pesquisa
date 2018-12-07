@@ -20,7 +20,7 @@ def procurarNum(num, vet, e, d):
     else:
         return -1
 
-print(vetor)
+#print(vetor)
 
 if(procurarNum(numero, vetor, 0, len(vetor)-1) > -1):
     print(numero,' contem no vetor')
