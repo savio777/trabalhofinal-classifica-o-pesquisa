@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 tamanho = int(input('tamanho do vetor~> '))
 
 vetor = []
