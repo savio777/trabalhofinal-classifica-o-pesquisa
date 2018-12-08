@@ -31,8 +31,9 @@ def procurarNum(num, vet):
     return -1
 
 print(vetor)
-
-if(procurarNum(numero, vetor) > -1):
+print(int(procurarNum(numero, vetor)))
+''' ficou bugado, não consegui concertar o bug '''
+'''if(procurarNum(numero, vetor) > -1):
     print(numero,' está no vetor')
 else:
-    print(numero,' não está no vetor')
+    print(numero,' não está no vetor')'''
